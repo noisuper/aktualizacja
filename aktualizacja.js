@@ -1,7 +1,7 @@
 const express = require('express')
 var bodyParser = require(`body-parser`);
 const app = express()
-const port = 3000
+const port = 6969
 const execSync = require('child_process').execSync;
 
 app.use(express.static(`public`))
