@@ -1,0 +1,15 @@
+{
+  "name": "aktualizacja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "aktualizacja.js",
+  "scripts": {
+    "start": "node aktualizacja.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
