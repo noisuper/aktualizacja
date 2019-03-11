@@ -1,0 +1,27 @@
+{
+    "name": "hidden-service-test",
+    "version": "1.0.0",
+    "description": "Super hidden service test",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pantadeusz/hidden-service-test.git"
+    },
+    "keywords": [
+      "tor",
+      "onion"
+    ],
+    "author": "TP",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/pantadeusz/hidden-service-test/issues"
+    },
+    "homepage": "https://github.com/pantadeusz/hidden-service-test#readme",
+    "dependencies": {
+      "express": "^4.16.4"
+    }
+  }
