@@ -29,8 +29,8 @@ app.post('/lampka1.html', (req, res) => {
     //licznik++;
 })
 
-execSync('echo "26" > /sys/class/gpio/export');
-execSync('echo "out" > /sys/class/gpio/gpio26/direction');
+exec('echo "26" > /sys/class/gpio/export');
+exec('echo "out" > /sys/class/gpio/gpio26/direction');
 
 app.listen(port,
 () => console.log(`Example app listening on port ${port}!`))
