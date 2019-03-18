@@ -18,14 +18,14 @@ app.get('/', (req, res) => {
 app.post('/lampka.html', (req, res) => {
     //console.log(req.body);
     res.redirect('lampka1.html');
-    execSync('echo "0" > /sys/class/gpio/gpio26/value');
+    execSync('echo "1" > /sys/class/gpio/gpio26/value');
     //licznik++;
 })
 
 app.post('/lampka1.html', (req, res) => {
     //console.log(req.body);
     res.redirect('lampka.html');
-    execSync('echo "1" > /sys/class/gpio/gpio26/value');
+    execSync('echo "0" > /sys/class/gpio/gpio26/value');
     //licznik++;
 })
 
