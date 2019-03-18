@@ -41,7 +41,7 @@ app.post('/lampka1.html', (req, res) => {
 //     error.stderr;  // Holds the stderr output. Use `.toString()`.
 //     error.stdout;  // Holds the stdout output. Use `.toString()`.
   }
-};
+
 
 app.listen(port,
 () => console.log(`Example app listening on port ${port}!`))
