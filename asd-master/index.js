@@ -36,10 +36,10 @@ execSync('echo "out" > /sys/class/gpio/gpio26/direction');
     return child_process.execSync(cmd).toString();
   } 
   catch (error) {
-    error.status;  // Might be 127 in your example.
-    error.message; // Holds the message you typically want.
-    error.stderr;  // Holds the stderr output. Use `.toString()`.
-    error.stdout;  // Holds the stdout output. Use `.toString()`.
+//     error.status;  // Might be 127 in your example.
+//     error.message; // Holds the message you typically want.
+//     error.stderr;  // Holds the stderr output. Use `.toString()`.
+//     error.stdout;  // Holds the stdout output. Use `.toString()`.
   }
 };
 
