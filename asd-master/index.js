@@ -29,11 +29,11 @@ app.post('/lampka1.html', (req, res) => {
     //licznik++;
 })
 
-execSync('echo "26" > /sys/class/gpio/export');
-execSync('echo "out" > /sys/class/gpio/gpio26/direction');
 
  try {
-    return child_process.execSync(cmd).toString();
+    execSync('echo "26" > /sys/class/gpio/export');
+    execSync('echo "out" > /sys/class/gpio/gpio26/direction');
+
   } 
   catch (error) {
 //     error.status;  // Might be 127 in your example.
