@@ -29,8 +29,8 @@ app.post('/lampka1.html', (req, res) => {
     //licznik++;
 })
 
-exec('echo "26" > /sys/class/gpio/export');
-exec('echo "out" > /sys/class/gpio/gpio26/direction');
+execSync('echo "26" > /sys/class/gpio/export');
+execSync('echo "out" > /sys/class/gpio/gpio26/direction');
 
 catch (error) {
     error.status;  // Might be 127 in your example.
