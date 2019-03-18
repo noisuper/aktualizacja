@@ -32,12 +32,16 @@ app.post('/lampka1.html', (req, res) => {
 execSync('echo "26" > /sys/class/gpio/export');
 execSync('echo "out" > /sys/class/gpio/gpio26/direction');
 
-catch (error) {
+ try {
+    return child_process.execSync(cmd).toString();
+  } 
+  catch (error) {
     error.status;  // Might be 127 in your example.
     error.message; // Holds the message you typically want.
     error.stderr;  // Holds the stderr output. Use `.toString()`.
     error.stdout;  // Holds the stdout output. Use `.toString()`.
   }
+};
 
 app.listen(port,
 () => console.log(`Example app listening on port ${port}!`))
