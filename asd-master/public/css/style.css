@@ -1,5 +1,26 @@
-body {
-    background-color:	#FFB6C1;
-    
- }
- 
+#bla {
+    color: #CD5C5C;
+    text-align: center;
+    width: 100%;
+    background-color: #FFE4C4;
+    font-size: 36px;
+    }
+  
+  body {
+  background-color: #98FB98;
+  }
+  
+  #la {
+    color: #00FA9A;
+    background-color: #0000CD;
+    width: 100%;
+    font-family: hard-light;
+  }
+  button {color: magenta;
+  background-color: yellow;
+  text-align: center;
+  width: 100%;
+  font-family: whitesmoke;
+  font-size: 80px;
+  }
+  
