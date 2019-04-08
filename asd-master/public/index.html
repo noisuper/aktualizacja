@@ -13,6 +13,17 @@
                 
                 
             });
+
+
+            $('#sprawdz').on('click',function(e){
+                $.ajax({
+                    url: "/lampka",
+                    context: document.body
+                    }).done(function(resp) {
+                        console.log(resp);
+                        $('#status').text(resp.state?"zapalona":"zgaszona");
+                    });
+            });
         });     
         
         
@@ -26,5 +37,7 @@
             <form action="/update" method="POST">
                 <input type="submit" name="akt" value="Aktualizuj" />
             </form>
+            <button id="sprawdz">sprawdz</button>
+            <p id='status'>status</p>
         </body> 
 </html>
