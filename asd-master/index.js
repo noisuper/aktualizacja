@@ -29,9 +29,24 @@ app.post('/lampka', (req, res) => {
     console.log(req.body);
     stan = req.body.state;
     console.log(stan);
-    //execSync('echo "1" > /sys/class/gpio/gpio26/value');
-    //licznik++;
     res.send({state:stan});
+    try {
+      if (stan !== 'true'){
+      execSync('echo "0" > /sys/class/gpio/gpio26/value');
+    }
+    else {
+        execSync('echo "1" > /sys/class/gpio/gpio26/value');
+    }
+  } catch (error) {
+    console.log(error.status);  // Might be 127 in your example.
+    console.log(error.message); // Holds the message you typically want.
+    console.log(error.stderr);  // Holds the stderr output. Use `.toString()`.
+    console.log(error.stdout);  // Holds the stdout output. Use `.toString()`.
+  }
+
+    
+    
+    
 })
 app.post(`/update`, (req, res) => {
   console.log(req.body);
@@ -39,6 +54,8 @@ app.post(`/update`, (req, res) => {
   res.send('Zrobilem aktualizacje')
 
 })
+
+
 
   try {
      execSync('echo "26" > /sys/class/gpio/export');
