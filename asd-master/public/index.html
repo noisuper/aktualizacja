@@ -7,15 +7,7 @@
         <script lang="js">
         $('body').ready(function(){
             
-            $("#zapal").on('click',function(e){
-                $.post("/lampka",{state:true});
-            });
-            
-            $("#zgas").on('click',function(e){
-                $.post("/lampka",{state:false});
-            });
-
-            $('#sprawdz').on('click',function(e){
+            var sprawdz_status = function(e){
                 $.ajax({
                     url: "/lampka",
                     context: document.body
@@ -27,7 +19,21 @@
                             $('#status').text("zgaszona");
                         }
                     });
+            };
+
+            sprawdz_status();
+            
+            $("#zapal").on('click',function(e){
+                $.post("/lampka",{state:true});
+                $('#zapal').on('click',sprawdz_status);
             });
+            
+            $("#zgas").on('click',function(e){
+                $.post("/lampka",{state:false});
+                $('#zgas').on('click',sprawdz_status)
+
+            });
+
         });     
 
         
@@ -38,7 +44,6 @@
             <h2>takie coś co robi nic</h2>
             <button id="zgas">zgas</button>
             <button id="zapal">zapal</button>
-            <button id="sprawdz">sprawdz</button>
             <p id='status'>status</p>
         </body> 
 </html>
