@@ -15,11 +15,16 @@
                         console.log(resp);
                         if ( resp.state == "true" ) {
                             $('#status').text("zapalona");
+                            $("#status").removeClass("zgaszona");
+                            $("#status").addClass("zapalona");
                         } else {
                             $('#status').text("zgaszona");
+                            $("#status").removeClass("zapalona");
+                            $("#status").addClass("zgaszona");
                         }
                     });
             };
+            
 
             sprawdz_status();
             
