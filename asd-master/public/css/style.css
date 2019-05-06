@@ -12,17 +12,17 @@
   font-size: 80px;
   }
   .zapalona {
+    width: 100%;
+    height: 300px;
    color: #555555;
    text-align: center;
    font-family: whitesmoke;
   font-size: 40px;
-  background-image: url(https://www.google.pl/search?q=%C5%BCar%C3%B3wka+obrazek&tbm=isch&tbs=rimg:CTSei7YX8HhrIjjs1nehm4lR9EG3W2LYsxQFPYuo1BR2UXqRE4iEodBOKLlvDt2J19CaLxFpPZIW91gkAN7yOExdjioSCezWd6GbiVH0EVTULisRD0I2KhIJQbdbYtizFAURshV-R989TRAqEgk9i6jUFHZRehFsh0KQ8-ESpSoSCZETiISh0E4oET3ZJ0n8fXHWKhIJuW8O3YnX0JoR-k25JigYw8kqEgkvEWk9khb3WBHiExEbhPDwhCoSCSQA3vI4TF2OETuVZVt3xwhd&tbo=u&sa=X&ved=2ahUKEwi05syzttLhAhXLT98KHdv6BWwQ9C96BAgBEBg&biw=1680&bih=914&dpr=1#imgrc=J8TUT6oJmpTCFM:)
-}
-
+  }
   .zgaszona {
-color:#555555;
+color: #555555;
 text-align: center;
 font-family: whitesmoke;
 font-size: 40px;
-background-color : green;
+background-color:#33CC66;
   }
