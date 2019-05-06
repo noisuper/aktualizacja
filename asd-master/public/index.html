@@ -30,12 +30,13 @@
             
             $("#zapal").on('click',function(e){
                 $.post("/lampka",{state:true});
-                $('#zapal').on('click',sprawdz_status);
+                sprawdz_status();
             });
             
             $("#zgas").on('click',function(e){
                 $.post("/lampka",{state:false});
-                $('#zgas').on('click',sprawdz_status)
+                sprawdz_status()
+
 
             });
 
