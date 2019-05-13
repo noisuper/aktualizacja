@@ -17,7 +17,24 @@ app.get('/', (req, res) => {
   licznik++;
 })
 
+function checkPass(login,password){
+  if(login=="login"&&password=="haslo123"){
+    return true;
+  }else{
+    return false;
+  }
+}
 
+app.post('/login',(req, res) => {
+  let login = req.body.login;
+  let password = req.body.password;
+  console.log(login+" "+password);
+  if(checkPass(login,password)){
+    res.redirect('/');
+  }else{
+    res.redirect('login.html');
+  }
+})
 
 app.get('/lampka', (req, res) => {
     // res.send(`Liczę, i mam ${licznik}`);
