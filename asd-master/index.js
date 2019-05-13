@@ -12,12 +12,34 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 var stan = false;
 var licznik = 0;
 
+function checkpass(login,password){
+if(login=="login"&&password=="kochammame12345"){
+  return true;
+}
+
+else if(login=="login"&&password!="kochammame12345"){
+}
+
+else{
+  return false;
+}
+}
+
 app.get('/', (req, res) => {
   res.send(`Liczę, i mam ${licznik}`);
   licznik++;
 })
 
-
+app.post('/login', (req, res) => {
+let login = req.body.login;
+let password = req.body.password;
+console.log("login: "+login+", "+"password: "+password);
+if(checkpass(login,password)){
+  res.send('Poprawne logowanie');
+}else{
+  res.send('niepoprawne logowanie');
+}
+})
 
 app.get('/lampka', (req, res) => {
     // res.send(`Liczę, i mam ${licznik}`);
