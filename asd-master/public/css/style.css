@@ -1,64 +1,48 @@
-  h2 {
-    text-align: center;
-    font-size: 50px;
-    font-family: whitesmoke;
-  }
 
-  body {
-  background-color:#888888;
-  }
-  
-  button {color: #666666;
-  background-color: #CCCCCC;
-  text-align: center;
-  width: 100%;
-  font-family: whitesmoke;
-  font-size: 80px;
-  }
-  .zapalona {
-    width: 100%;
-    height: 60px;
-   color: #555555;
-   text-align: center;
-   font-family: whitesmoke;
-  font-size: 40px;
-  background-color:#33CC66;
-  }
-  .zgaszona {
-    width: 100%;
-    height: 60px;
-color: #555555;
-text-align: center;
-font-family: whitesmoke;
-font-size: 40px;
-background-color: #DC143C;
-  }
   .loginpanel {
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
+  padding-bottom: 25 px;
   }
-  form{
-    width: 100%;
-  }
-  input[type="text"] {
-  border: 1.5px solid pink;
-  }
-  input[type="password"]{
-  border: 1.5px solid purple;
-  margin-right: 100%;
-  margin-top: 30px;
-  box-align: center;
-  }
-  .loginbutton {color: #666666;
-  background-color: #CCCCCC;
-  text-align: center;
-  width: 50%;
-  font-family: whitesmoke;
-  font-size: 14px;
-  margin-top: 15px;
+  body{
+    width: 95%;
+    height: 100%;
+    background-image:linear-gradient(#3366CC,#6699FF,#99CCFF);
+    margin-bottom: 48%;
 
   }
+  input[type="text"] {
+  border: 1.5px solid #66CCFF;
+  }
+  input[type="password"]{
+  border: 1.5px solid #3399CC; 
+  box-align: center;
+  clear: both;
+  }
+  .loginbutton {color: #666666;
+  text-align: center;
+  width: 25%;
+  font-family: whitesmoke;
+  font-size: 14px;
+  clear: both;
+  margin: 0 auto;
+
+  }
+.passwordpanel { 
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+h2 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: whitesmoke;
+color: navy;
+}
 
 
 
