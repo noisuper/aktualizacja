@@ -23,7 +23,7 @@
   .loginbutton {color: #666666;
   text-align: center;
   width: 25%;
-  font-family: whitesmoke;
+  font-family: Helvetica;
   font-size: 14px;
   clear: both;
   margin: 0 auto;
@@ -40,8 +40,9 @@ h2 {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  font-family: whitesmoke;
+  font-family: Helvetica;
 color: navy;
+font-size: 70px;
 }
 
 
