@@ -33,11 +33,13 @@
             sprawdz_status();
             
             $("#zapal").on('click',function(e){
+                $("#zapal").attr("disabled", true);
                 $.post("/lampka",{state:true});
                 sprawdz_status();
             });
             
             $("#zgas").on('click',function(e){
+                $("#zgas").attr("disabled", true);
                 $.post("/lampka",{state:false});
                 sprawdz_status()
 
