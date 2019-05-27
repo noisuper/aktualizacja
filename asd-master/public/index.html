@@ -20,10 +20,15 @@
                                 $('#status').text("zapalona");
                                 $("#status").removeClass("zgaszona");
                                 $("#status").addClass("zapalona");
-                            } else {
+                                $("#zapal").hide("zapal");
+                                $("#zgas").show("zgas");
+                            }
+                             else {
                                 $('#status').text("zgaszona");
                                 $("#status").removeClass("zapalona");
                                 $("#status").addClass("zgaszona");
+                                $("#zgas").hide("zgas");
+                                $("#zapal").show("zapal");
                             }
                         }
                     });
