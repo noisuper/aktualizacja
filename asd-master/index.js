@@ -6,6 +6,23 @@ var session = require('express-session');
 const app = express()
 const port = 6969
 
+
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
+
+var router = express.Router();
+router.get('/', function (req, res, next) {  
+  console.log(req.session);
+  // if(req.session){
+  //   if (req.session.loginname) next();
+  //   else res.redirect('/login.html');
+  // } else {
+  //   res.redirect('/login.html');
+  // }
+  next();
+});
+app.use(router);
+
 app.use(express.static('public'))
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -13,10 +30,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 var stan = false;
 var licznik = 0;
 
-
-app.set('trust proxy', 1) // trust first proxy
-
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
 
 function checkPass(login,password){
   if(login=="login"&&password=="haslo123"){
@@ -33,24 +46,13 @@ app.post('/login',(req, res) => {
   if(checkPass(login,password)){
     res.send('OK');
     req.session.loginname=1;
+    console.log(req.session.loginname);
   }else{
     res.redirect('login.html');
   }
 })
 
 
-app.get('/', function(req, res, next) {
-  if (req.session.loginname==1) {
-    console.log("asdas");
-  } else {
-    req.session.loginname=0;
-  }
-})
-
-app.get('/', (req, res) => {
-  res.send(`Liczę, i mam ${licznik}`);
-  licznik++;
-})
 
 app.get('/lampka', (req, res) => {
     // res.send(`Liczę, i mam ${licznik}`);
