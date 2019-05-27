@@ -22,6 +22,7 @@
                                 $("#status").addClass("zapalona");
                                 $("#zapal").hide("zapal");
                                 $("#zgas").show("zgas");
+                                $("#zgas").attr("disabled", false);
                             }
                              else {
                                 $('#status').text("zgaszona");
@@ -29,6 +30,7 @@
                                 $("#status").addClass("zgaszona");
                                 $("#zgas").hide("zgas");
                                 $("#zapal").show("zapal");
+                                $("#zapal").attr("disabled", false);
                             }
                         }
                     });
