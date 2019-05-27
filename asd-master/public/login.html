@@ -5,12 +5,25 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/jquery-3.3.1.js"></script>
         <script lang="js">
-        $('body').ready(function(){
-            
-            
-        });     
-
         
+
+            var login_click = function(f){
+                $("#login").on('click',function(e){
+                    $.post("/login",{
+                        login:$(".loginpanel input").val(),
+                        password:$(".passwordpanel input").val()
+                    });
+                }
+                
+                )
+                    
+                    
+                }
+
+            
+            
+            
+             
         </script>
 
     </head>
@@ -24,9 +37,9 @@
                     <input type="password" name="password" >
                 </div>
                 <div class="loginbutton">
-                    <button class="loginbutton" name="loginbutton"> Zaloguj </button>
+                    <button id="login" name="logbutton"> Zaloguj </button>
                 </div>
-        
+                
             </form>
         </body> 
 </html>

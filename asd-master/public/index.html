@@ -13,14 +13,18 @@
                     context: document.body
                     }).done(function(resp) {
                         console.log(resp);
-                        if ( resp.state == "true" ) {
-                            $('#status').text("zapalona");
-                            $("#status").removeClass("zgaszona");
-                            $("#status").addClass("zapalona");
+                        if (resp.state == "error") {
+                            window.location.replace("/login.html")
                         } else {
-                            $('#status').text("zgaszona");
-                            $("#status").removeClass("zapalona");
-                            $("#status").addClass("zgaszona");
+                            if ( resp.state == "true" ) {
+                                $('#status').text("zapalona");
+                                $("#status").removeClass("zgaszona");
+                                $("#status").addClass("zapalona");
+                            } else {
+                                $('#status').text("zgaszona");
+                                $("#status").removeClass("zapalona");
+                                $("#status").addClass("zgaszona");
+                            }
                         }
                     });
             };
