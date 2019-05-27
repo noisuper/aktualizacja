@@ -1,6 +1,7 @@
 const execSync = require('child_process').execSync
 const express = require('express')
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 const app = express()
 const port = 6969
@@ -11,6 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 var stan = false;
 var licznik = 0;
+
+
+app.set('trust proxy', 1) // trust first proxy
+
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
 
 function checkPass(login,password){
   if(login=="login"&&password=="haslo123"){
@@ -25,9 +31,19 @@ app.post('/login',(req, res) => {
   let password = req.body.password;
   console.log(login+" "+password);
   if(checkPass(login,password)){
-    res.redirect('/');
+    res.send('OK');
+    req.session.loginname=1;
   }else{
     res.redirect('login.html');
+  }
+})
+
+
+app.get('/', function(req, res, next) {
+  if (req.session.loginname==1) {
+    console.log("asdas");
+  } else {
+    req.session.loginname=0;
   }
 })
 
