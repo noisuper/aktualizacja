@@ -14,22 +14,31 @@
   }
   input[type="text"] {
   border: 1.5px solid #66CCFF;
+  margin-top: 10px;
   }
   input[type="password"]{
-  border: 1.5px solid #3399CC; 
+  border: 1.5px solid #66CCFF; 
   box-align: center;
   clear: both;
+  margin-top: 10px;
+margin-bottom: 10px;
   }
-  .loginbutton {color: #666666;
+  .loginbutton {color: white;
   text-align: center;
   width: 25%;
-  /*insert kremówka */
-  font-family: Helvetica;
+  font-family:'Amiko' ;
   font-size: 14px;
   clear: both;
   margin: 0 auto;
+   
 
   }
+.loginbutton button {
+  color: black;
+  background-color: white;
+  border-color: rgb(53, 124, 231);
+  text-align: 'Amiko';
+}
 .passwordpanel { 
   width: 100%;
   margin: 0 auto;
@@ -41,11 +50,13 @@ h2 {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  font-family: Helvetica;
+  font-family: 'Amiko', sans-serif;
 color: navy;
-font-size: 70px;
+font-size: 0px;
 }
-
+h2::before {
+  content: url(https://gryplanszowe.pl/pol_pl_Puzzle-100-el-Slodki-kotek-4291_1.jpg);
+} 
 
 
 
