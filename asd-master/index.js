@@ -46,9 +46,17 @@ app.post('/login',(req, res) => {
   if(checkPass(login,password)){
     req.session.loginname=1;
     console.log(req.session.loginname);
-    res.send('OK');
+    res.redirect('/');
   }else{
     res.redirect('login.html');
+  }
+})
+
+app.post('/logout',(req, res) => {
+  if(req.session.loginname){
+    res.send('Kropla beskidu');
+  }else{
+    res.send('You are not logged on!');
   }
 })
 
