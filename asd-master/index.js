@@ -8,18 +8,18 @@ const port = 6969
 
 
 app.set('trust proxy', 1) // trust first proxy
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
+app.use(session({ secret: 'keyboard cat',   saveUninitialized: true, cookie: { maxAge: 60000 }}))
 
 var router = express.Router();
 router.get('/', function (req, res, next) {  
   console.log(req.session);
-  // if(req.session){
-  //   if (req.session.loginname) next();
-  //   else res.redirect('/login.html');
-  // } else {
-  //   res.redirect('/login.html');
-  // }
-  next();
+  if(req.session){
+    if (req.session.loginname) next();
+    else res.redirect('/login.html');
+  } else {
+    res.redirect('/login.html');
+  }
+  //next();
 });
 app.use(router);
 
@@ -44,9 +44,9 @@ app.post('/login',(req, res) => {
   let password = req.body.password;
   console.log(login+" "+password);
   if(checkPass(login,password)){
-    res.send('OK');
     req.session.loginname=1;
     console.log(req.session.loginname);
+    res.send('OK');
   }else{
     res.redirect('login.html');
   }
