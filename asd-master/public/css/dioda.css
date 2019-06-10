@@ -1,29 +1,37 @@
 body {
-  background-color:#888888;
+  background-color:#92a8d1;
   }
-  
-  button {color: #666666;
-  background-color: #CCCCCC;
+  h2 {
+    font-family: "Segoe UI","Segoe WP",Arial,Sans-Serif;
+    text-align: center;
+    color: #034f84;
+    font-size: 5vw;
+  }
+  button {color: #92a8d1;
+  background-color: #034f84;
   text-align: center;
   width: 100%;
-  font-family: whitesmoke;
-  font-size: 80px;
+  font-family:"Segoe UI","Segoe WP",Arial,Sans-Serif;
+  font-size: 5vw;
+  border-radius: 20px;
   }
   .zapalona {
     width: 100%;
-    height: 60px;
-   color: #555555;
+    height: auto;
+   color: #034f84;
    text-align: center;
-   font-family: whitesmoke;
-  font-size: 40px;
-  background-color:#33CC66;
+   font-family: "Segoe UI","Segoe WP",Arial,Sans-Serif;
+  font-size: 5vw;
+  background-color: #f7cac9;
+  border-radius: 20px;
   }
   .zgaszona {
     width: 100%;
-    height: 60px;
-color: #555555;
+    height: auto;
+    font-size:5vw;
+color: #034f84;
 text-align: center;
-font-family: whitesmoke;
-font-size: 40px;
-background-color: #DC143C;
+font-family: "Segoe UI","Segoe WP",Arial,Sans-Serif;
+background-color: #f7786b;
+border-radius: 20px;
   }
