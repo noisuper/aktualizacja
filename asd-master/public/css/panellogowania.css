@@ -13,14 +13,34 @@ body {
 .loginpanel input {
 border-radius: 20px;
 font-size: 5vw;
-width: 100%;
+width: 90%;
 margin-bottom: 30px;
+}
+.loginpanel{
+  text-align: center;
 
 }
 .passwordpanel input{
   border-radius: 20px;
   font-size: 5vw;
-  width: 100%;
+  width: 90%;
   margin-bottom: 30px;
 
+}
+ .passwordpanel{
+  text-align: center;
+}
+
+.loginbutton button{
+  border-radius: 20px;
+  font-size: 5vw;
+  font-family:"Segoe UI","Segoe WP",Arial,Sans-Serif;
+  color: #034f84;
+  background-color: white;
+  width: 50%;
+  
+}
+
+.loginbutton{
+  text-align: center;
 }
